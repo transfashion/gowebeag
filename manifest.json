@@ -1,0 +1,14 @@
+{
+	"name": "Aigner",
+	"short_name": "Aigner",
+	"lang": "en-US",
+	"start_url": "/",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"icons": [
+	  {
+		"src": "asset/data/images/aigner-favicon-32x32.png",
+		"sizes": "32x32"
+	  }
+	]
+}

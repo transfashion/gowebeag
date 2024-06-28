@@ -1,0 +1,29 @@
+{{define "layoutdasar"}}<!doctype html>
+<html>
+	<head>
+		<title>title</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<link rel="manifest" href="/manifest.json">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/template/layoutparam.css">
+		<link rel="stylesheet" href="/template/layout.css">
+		<link rel="stylesheet" href="/template/footer.css">
+		<link rel="stylesheet" href="/template/header.css">
+	</head>
+	<body>
+
+		<div id="pagecontent">
+		{{block "pagecontent" .}}
+		{{end}}
+		</div>
+
+		{{block "pagefooter" .}}
+		{{end}}
+
+		{{block "pageheader" .}}
+		{{end}}
+
+	</body>
+</html>{{end}}

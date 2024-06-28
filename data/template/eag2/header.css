@@ -1,0 +1,25 @@
+#container-pageheader {
+	margin: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+#pageheader {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 1024px) {
+	#pageheader {
+		height: var(--pageheader-height-mobile);
+	}
+	
+}
+
+@media screen and (min-width: 1025px) {
+	#pageheader {
+		height: var(--pageheader-height-desktop);
+	}
+}

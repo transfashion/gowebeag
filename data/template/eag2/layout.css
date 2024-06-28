@@ -1,0 +1,51 @@
+@import url("assets/fonts/futura.css");
+
+* {
+	font-family: 'Futura LT', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 15px;
+}
+
+html {
+	scrollbar-gutter: stable;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+
+#pagecontent {
+	flex-grow: 1;
+	margin: 0;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.hidden {
+	display: none !important;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+	#pagecontent {
+		margin-top: var(--pageheader-height-mobile);
+	}
+	
+}
+
+@media screen and (min-width: 1025px) {
+	#pagecontent {
+		margin-top: var(--pageheader-height-desktop);
+	}
+	
+}
+
