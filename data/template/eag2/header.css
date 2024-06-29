@@ -8,6 +8,13 @@
 
 #pageheader {
 	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+
+.pageheader-scroll-down {
 	border-bottom: 1px solid #ddd;
 }
 
@@ -15,11 +22,27 @@
 	#pageheader {
 		height: var(--pageheader-height-mobile);
 	}
+
+	#pageheader-mobile {
+		display: block;
+	}
+
+	#pageheader-desktop {
+		display: none;
+	}
 	
 }
 
 @media screen and (min-width: 1025px) {
 	#pageheader {
 		height: var(--pageheader-height-desktop);
+	}
+
+	#pageheader-mobile {
+		display: none;
+	}
+
+	#pageheader-desktop {
+		display: block;
 	}
 }

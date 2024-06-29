@@ -2,9 +2,17 @@
 {{define "pageheader"}}
 <div id="container-pageheader">
 	<div id="pageheader">
-		ini header
+		<!-- mobile-->
+		<div id="pageheader-mobile">
+			ini header mobile
+		</div>
+
+		<!-- desktop-->
+		<div id="pageheader-desktop">
+			ini header desktop
+		</div>
+		{{block "mainmenu-desktop-bar" .}}
+		{{end}}
 	</div>
-	{{block "mainmenu-desktop" .}}
-	{{end}}
 </div>
 {{end}}

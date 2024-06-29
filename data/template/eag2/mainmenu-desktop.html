@@ -1,6 +1,78 @@
 {{template "layoutdasar" .}}
-{{define "mainmenu-desktop"}}
-<div id="mainmenu-desktop" class="hidden">
-	
+
+{{define "mainmenu-desktop-bar"}}
+<!-- referensi: https://www.w3schools.com/howto/howto_css_mega_menu.asp -->
+<nav id="mainmenu-desktop" class="show-on-desktop">
+	<div class="dropdown">
+		<button class="dropbtn">Woman</button>
+		<div class="dropdown-content">
+			<div class="dropdown-content-container">
+				<div class="dropdown-content-column">
+					<a href="#">ACCESSORIES</a>
+					<a href="#">BAGS</a>
+					<a href="#">BELTS</a>
+					<a href="#">READY TO WEAR</a>
+				</div>
+				<div class="dropdown-content-column">
+					<a href="#">SHOES</a>
+					<a href="#">SMALL LEATHER GOODS</a>
+					<a href="#">WATCHES</a>
+				</div>
+				<div class="dropdown-content-column"></div>
+			</div>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Man</button>
+		<div class="dropdown-content">
+			<div class="dropdown-content-container">
+				<div class="dropdown-content-column">
+					<a href="#">BAGS</a>
+					<a href="#">BELTS</a>
+				</div>
+				<div class="dropdown-content-column">
+					<a href="#">SHOES</a>
+					<a href="#">SMALL LEATHER GOODS</a>
+					<a href="#">WATCHES</a>
+				</div>
+				<div class="dropdown-content-column"></div>
+			</div>	
+		</div>
+	</div>		
+
+	<a class="navbarlink" href="#">Magazine</a>
+
+	<div class="dropdown">
+		<button class="dropbtn">Inspiration</button>
+		<div class="dropdown-content">
+			<div class="dropdown-content-container">
+				<div class="dropdown-content-column">
+					<a href="#">VIDEOS</a>
+				</div>
+				<div class="dropdown-content-column">
+					<a href="#">COLLECTION BOOK</a>
+				</div>
+				<div class="dropdown-content-column">
+					<a href="#">SEASON HIGHLIGHTS</a>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<a class="navbarlink" href="#">New In</a>
+	<a class="navbarlink" href="#">Best Seller</a>
+	<a class="navbarlink" href="#">Sale</a>
+</nav>
+{{end}}
+
+
+
+{{define "mainmenu-desktop-pop"}}
+<div id="mainmenu-desktop-overlay" class="hidden">
+	pop up menu content<br>
+	aaaaa<br>
+	bbbbb<br>
+	cccccc<br>
+	dddddd<br>
 </div>
 {{end}}
+

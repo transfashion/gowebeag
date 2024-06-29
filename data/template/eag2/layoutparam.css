@@ -1,4 +1,6 @@
 :root {
-	--pageheader-height-desktop: 120px;
-	--pageheader-height-mobile: 80px;
+	--pageheader-height-desktop: 147px;
+	--pageheader-height-mobile: 50px;
+
+	--mainmenu-desktop-height: 43px;
 }
