@@ -10,15 +10,14 @@ export async function Init(opt) {
 	self.pageheader = opt.pageheader
 
 	// load promoter style
-	var head = document.getElementsByTagName('HEAD')[0];
  	var link = document.createElement('link');
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
 	link.href = '/template/promoter.css';
 	link.onload = function () {
-		promoter_setup(self, opt)
+		promoter_setup(self)
 	};  
-	head.appendChild(link);
+	opt.head.appendChild(link);
 
 	var window_resize = () => {
 		recalculateSize(self)
