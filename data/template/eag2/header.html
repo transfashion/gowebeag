@@ -5,30 +5,42 @@
 		<!-- mobile-->
 		<div class="pageheader-bar mobile-only">
 			<div class="pageheader-bar-left">
-
+				<img src="/template/assets/icon-burgermenu.svg" class="pageheader-icon-img">
 			</div>
-			<div class="pageheader-bar--center">
+			<div class="pageheader-bar-center">
 				<a href="/">
 					<img class="logo-mobile" src="/asset/data/images/aigner-emblem.svg">
 				</a>
 			</div>
 			<div class="pageheader-bar-right">
-
+				<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
+				<img src="/template/assets/icon-chart.svg" class="pageheader-icon-img">
+				{{block "search-mobile-icon" .}}
+				{{end}}
 			</div>
 		</div>
 
 		<!-- desktop-->
 		<div class="pageheader-bar desktop-only">
-			<div class="pageheader-bar-left">
+			<div class="pageheader-bar-left">	
 				{{block "search-desktop" .}}
 				{{end}}
 			</div>
-			<div class="pageheader-bar--center">
+			<div class="pageheader-bar-center">
 				<a href="/">
 					<img class="logo-desktop" src="/asset/data/images/aigner-logo.svg">
 				</a>
 			</div>
 			<div class="pageheader-bar-right">
+				<div class="pageheader-link">
+					<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
+					<a href="javascript:void(0)">login / register</a>	
+				</div>
+
+				<div class="pageheader-link">
+					<img src="/template/assets/icon-chart.svg" class="pageheader-icon-img">
+					<a href="javascript:void(0)">cart</a>	
+				</div>
 			</div>
 		</div>
 
