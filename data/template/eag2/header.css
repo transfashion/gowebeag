@@ -19,6 +19,13 @@
 	border-bottom: 1px solid #ddd;
 }
 
+.logo-desktop {
+	width: 99px;
+	height: 56px;
+	margin-top: 20px;
+}
+
+
 @media screen and (max-width: 1024px) {
 	#pageheader {
 		height: var(--pageheader-height-mobile);
@@ -44,6 +51,8 @@
 	}
 
 	#pageheader-desktop {
-		display: block;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 }

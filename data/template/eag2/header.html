@@ -1,13 +1,6 @@
 {{template "layoutdasar" .}}
 {{define "pageheader"}}
 <div id="container-pageheader">
-	<!-- <div id="pageheader-promoter" class="hidden">
-		<div></div>
-		<div>Limited time offer 15% off: You'll get the discount on your order!</div>
-		<div>
-			<img id="pageheader-btn_promoter_close" src="/template/assets/icon-close.svg">
-		</div>
-	</div> -->
 	<div id="pageheader">
 		<!-- mobile-->
 		<div id="pageheader-mobile">
@@ -16,7 +9,13 @@
 
 		<!-- desktop-->
 		<div id="pageheader-desktop">
-			ini header desktop
+			<div>kiri</div>
+			<div>
+				<a href="/">
+					<img class="logo-desktop" src="/asset/data/images/aigner-logo.svg">
+				</a>
+			</div>
+			<div>kanan</div>
 		</div>
 		{{block "mainmenu-desktop-bar" .}}
 		{{end}}
