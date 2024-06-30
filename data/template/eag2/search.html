@@ -1,0 +1,46 @@
+{{template "layoutdasar" .}}
+
+
+
+{{define "search-mobile"}}
+	<div class="search-container mobile-only">
+		<input type="text" class="search-textbox" placeholder="Search for product">
+		<img src="/template/assets/icon-search.svg" class="search-icon">
+	</div>
+{{end}}
+
+
+
+{{define "search-desktop"}}
+	<div class="search-container desktop-only">
+		<input type="text" class="search-textbox" placeholder="Search for product">
+		<img src="/template/assets/icon-search.svg" class="search-icon">
+	</div>
+{{end}}
+
+
+
+{{define "search-content"}}
+	<div class="search-content">
+				
+		{{block "search-mobile" .}}
+		{{end}}
+
+		<div class="search-note">
+			Popular search terms
+		</div>
+		
+		<div class="search-result search-empty">
+			BAG<br>
+			CYBILL<br>
+			BAGS<br>
+			IVY<br>
+			CYBILL BELT<br>
+			GENOVEVA<br>
+			BELT<br>
+			CYBILL HANDBAG<br>
+			WATCH<br>
+		</div>
+
+	</div>
+{{end}}

@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="/template/footer.css">
 		<link rel="stylesheet" href="/template/header.css">
 		<link rel="stylesheet" href="/template/mainmenu-desktop.css">
+		<link rel="stylesheet" href="/template/search.css">
 
 		<script>
 			window.$global = {}
@@ -40,8 +41,10 @@
 	<script>
 		window.addEventListener("load", async (event) => {
 			var opt = {
+				head: document.getElementsByTagName('HEAD')[0],
 				pageheader: document.getElementById("pageheader"),
-				pagecontent: document.getElementById("pagecontent")
+				pagecontent: document.getElementById("pagecontent"),
+				
 			}
 			await window.$uilayout.Init(opt)
 		})

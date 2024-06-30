@@ -1,24 +1,44 @@
 {{template "layoutdasar" .}}
 {{define "pageheader"}}
 <div id="container-pageheader">
-	<div id="pageheader">
+	<div id="pageheader" class="pageheader" >
 		<!-- mobile-->
-		<div id="pageheader-mobile">
-			ini header mobile
+		<div class="pageheader-bar mobile-only">
+			<div class="pageheader-bar-left">
+
+			</div>
+			<div class="pageheader-bar--center">
+				<a href="/">
+					<img class="logo-mobile" src="/asset/data/images/aigner-emblem.svg">
+				</a>
+			</div>
+			<div class="pageheader-bar-right">
+
+			</div>
 		</div>
 
 		<!-- desktop-->
-		<div id="pageheader-desktop">
-			<div>kiri</div>
-			<div>
+		<div class="pageheader-bar desktop-only">
+			<div class="pageheader-bar-left">
+				{{block "search-desktop" .}}
+				{{end}}
+			</div>
+			<div class="pageheader-bar--center">
 				<a href="/">
 					<img class="logo-desktop" src="/asset/data/images/aigner-logo.svg">
 				</a>
 			</div>
-			<div>kanan</div>
+			<div class="pageheader-bar-right">
+			</div>
 		</div>
+
+
+		{{block "search-content" .}}
+		{{end}}
+
 		{{block "mainmenu-desktop-bar" .}}
 		{{end}}
+
 	</div>
 </div>
 {{end}}

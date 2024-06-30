@@ -1,7 +1,7 @@
 @import url("assets/fonts/futura.css");
 
 * {
-	font-family: 'Futura LT', sans-serif;
+	font-family: 'futura-regular', sans-serif;
 }
 
 html {
@@ -15,8 +15,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
-	font-size: 15px;
-	font-weight: normal;
+	font-size: 16px;
+	font-weight: 400;
 	font-style: normal;
 }
 
@@ -39,7 +39,10 @@ body {
 	#pagecontent {
 		margin-top: var(--pagecontent-mt-mobile);
 	}
-	
+
+	.desktop-only {
+		display: none !important;
+	}
 }
 
 @media screen and (min-width: 1025px) {
@@ -47,5 +50,8 @@ body {
 		margin-top: var(--pagecontent-mt-desktop);
 	}
 	
+	.mobile-only {
+		display: none !important;
+	}
 }
 

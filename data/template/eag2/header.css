@@ -15,6 +15,17 @@
 	margin-bottom: 24px;
 }
 
+.pageheader-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pageheader-bar-left, .pageheader-bar-right {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .pageheader-scroll-down {
 	border-bottom: 1px solid #ddd;
 }
@@ -25,20 +36,22 @@
 	margin-top: 20px;
 }
 
+.logo-mobile {
+	width: 22px;
+	height: 22px;
+	margin-top: 15px
+}
+
 
 @media screen and (max-width: 1024px) {
 	#pageheader {
 		height: var(--pageheader-height-mobile);
 	}
-
-	#pageheader-mobile {
-		display: block;
-	}
-
-	#pageheader-desktop {
-		display: none;
-	}
 	
+	.pageheader-bar-left, .pageheader-bar-right {
+		width: 100px;
+	}
+
 }
 
 @media screen and (min-width: 1025px) {
@@ -46,13 +59,7 @@
 		height: var(--pageheader-height-desktop);
 	}
 
-	#pageheader-mobile {
-		display: none;
-	}
-
-	#pageheader-desktop {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	.pageheader-bar-left, .pageheader-bar-right {
+		width: 400px;
 	}
 }

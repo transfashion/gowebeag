@@ -5,15 +5,18 @@ device:
     - footer.html
     - mainmenu-mobile.html
     - mainmenu-desktop.html
+    - search.html
   tablet:
     - layout.html
     - header.html
     - footer.html
     - mainmenu-mobile.html
     - mainmenu-desktop.html    
+    - search.html
   desktop:
     - layout.html    
     - header.html
     - footer.html
     - mainmenu-mobile.html
     - mainmenu-desktop.html    
+    - search.html
