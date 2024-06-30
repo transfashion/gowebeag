@@ -1,8 +1,9 @@
 import _, { map } from '/asset/data/jslibs/underscore-esm-min.mjs'
-
+import * as promoter from '/template/promoter.mjs'
 
 const obj_pageheader_container = document.getElementById("container-pageheader")
 const obj_pageheader = document.getElementById("pageheader")
+
 
 var previousScrollPosition = 0;
 var headerHeight = 0;
@@ -11,16 +12,24 @@ var headerHeight = 0;
 var lastY = 0
 
 
-export async function Init() {
+export async function Init(opt) {
 	console.log("initialising layout");
+	loadModules(opt)
+
 	window.addEventListener("scroll", _.throttle(window_scroll, 100), { passive: true});  // ref: https://dev.to/robole/how-to-detect-scroll-direction-in-vanilla-javascript-to-make-a-goofy-logo-animation-njc
 	window.addEventListener('resize', _.throttle(window_resize, 500), { passive: true});
-	
+
 	setTimeout(()=>{
 		window_resize()
 	}, 500)
 }
 
+async function loadModules(opt) {
+	window.$modules.promoter = promoter
+	for (var mname in window.$modules) {
+		window.$modules[mname].Init(opt)
+	}
+}
 
 function window_scroll() {
 	if (isscrolldown()) {

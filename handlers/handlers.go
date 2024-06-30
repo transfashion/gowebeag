@@ -36,3 +36,12 @@ func (hdr *Handler) LoginCheck(pv *appsmodel.PageVariable, pg *dwtpl.PageConfig)
 
 	return nil
 }
+
+// func (hdr *Handler) ApiAuthCheck(pv *appsmodel.PageVariable, pg *dwtpl.PageConfig) error {
+// 	r := pv.Request
+// 	w := pv.Response
+// 	ws := hdr.Webservice
+// 	ctx := pv.Request.Context()
+
+// 	authenticated := ws.Session.GetBool(ctx, string(appsmodel.IsAuthenticatedKeyName))
+// }

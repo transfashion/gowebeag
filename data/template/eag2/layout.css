@@ -2,9 +2,6 @@
 
 * {
 	font-family: 'Futura LT', sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 15px;
 }
 
 html {
@@ -18,6 +15,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
+	font-size: 15px;
+	font-weight: normal;
+	font-style: normal;
 }
 
 
@@ -37,14 +37,14 @@ body {
 
 @media screen and (max-width: 1024px) {
 	#pagecontent {
-		margin-top: var(--pageheader-height-mobile);
+		margin-top: var(--pagecontent-mt-mobile);
 	}
 	
 }
 
 @media screen and (min-width: 1025px) {
 	#pagecontent {
-		margin-top: var(--pageheader-height-desktop);
+		margin-top: var(--pagecontent-mt-desktop);
 	}
 	
 }

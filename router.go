@@ -5,6 +5,7 @@ import (
 	"github.com/fgtago/fgweb/appsmodel"
 	"github.com/fgtago/fgweb/defaulthandlers"
 	"github.com/go-chi/chi/v5"
+	"github.com/transfashion/gowebeag/apis"
 	"github.com/transfashion/gowebeag/handlers"
 )
 
@@ -18,6 +19,9 @@ func Router(mux *chi.Mux) error {
 	hnd := handlers.New(appsmodel.GetWebservice())
 	fgweb.Get(mux, "/manifest.json", hnd.Manifest)
 	fgweb.Get(mux, "/", hnd.Home)
+
+	api := apis.New(appsmodel.GetWebservice())
+	fgweb.Post(mux, "/api/promoter", api.Promoter)
 
 	return nil
 }
