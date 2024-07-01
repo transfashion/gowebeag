@@ -1,6 +1,7 @@
 import _, { map } from '/asset/data/jslibs/underscore-esm-min.mjs'
 import * as promoter from '/template/promoter.mjs'
 import * as search from '/template/search.mjs'
+import * as mainmenumobile from '/template/mainmenu-mobile.mjs'
 
 const obj_pageheader_container = document.getElementById("container-pageheader")
 const obj_pageheader = document.getElementById("pageheader")
@@ -28,6 +29,7 @@ export async function Init(opt) {
 async function loadModules(opt) {
 	window.$modules.promoter = promoter
 	window.$modules.search = search
+	window.$modules.mainmenumobile = mainmenumobile
 	for (var mname in window.$modules) {
 		window.$modules[mname].Init(opt)
 	}

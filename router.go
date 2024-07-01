@@ -22,6 +22,7 @@ func Router(mux *chi.Mux) error {
 
 	api := apis.New(appsmodel.GetWebservice())
 	fgweb.Post(mux, "/api/promoter", api.Promoter)
+	fgweb.Post(mux, "/api/search", api.Search)
 
 	return nil
 }

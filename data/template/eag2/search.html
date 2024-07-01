@@ -24,25 +24,42 @@
 
 
 {{define "search-content"}}
+	<div id="search-mask" class="maskhidden">
+	</div>	
+
 	<div class="search-content">
 				
 		{{block "search-mobile" .}}
 		{{end}}
 
-		<div class="search-note">
-			Popular search terms
+		<div id="search-empty">
+			<div class="search-note">
+				Popular search terms
+			</div>
+			
+			<div class="search-popular">
+				BAG<br>
+				CYBILL<br>
+				BAGS<br>
+				IVY<br>
+				CYBILL BELT<br>
+				GENOVEVA<br>
+				BELT<br>
+				CYBILL HANDBAG<br>
+				WATCH<br>
+			</div>
 		</div>
-		
-		<div class="search-result search-empty">
-			BAG<br>
-			CYBILL<br>
-			BAGS<br>
-			IVY<br>
-			CYBILL BELT<br>
-			GENOVEVA<br>
-			BELT<br>
-			CYBILL HANDBAG<br>
-			WATCH<br>
+
+		<div id="search-result" class="hidden">
+			<div id="search-result-loading" class="hidden">
+				Searching ...
+			</div>
+			<div id="search-result-content" class="hidden">
+
+			</div>
+			<div id="search-result-more" class="hidden">
+				more
+			</div>
 		</div>
 
 	</div>

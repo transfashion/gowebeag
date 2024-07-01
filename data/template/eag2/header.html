@@ -3,16 +3,17 @@
 <div id="container-pageheader">
 	<div id="pageheader" class="pageheader" >
 		<!-- mobile-->
-		<div class="pageheader-bar mobile-only">
-			<div class="pageheader-bar-left">
-				<img src="/template/assets/icon-burgermenu.svg" class="pageheader-icon-img">
+		<div class="headerbar mobile-only">
+			<div class="headerbar-left">
+				{{block "mainmenu-mobile-button" .}}
+				{{end}}
 			</div>
-			<div class="pageheader-bar-center">
+			<div class="headerbar-center">
 				<a href="/">
 					<img class="logo-mobile" src="/asset/data/images/aigner-emblem.svg">
 				</a>
 			</div>
-			<div class="pageheader-bar-right">
+			<div class="headerbar-right">
 				<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
 				<img src="/template/assets/icon-chart.svg" class="pageheader-icon-img">
 				{{block "search-mobile-icon" .}}
@@ -21,17 +22,17 @@
 		</div>
 
 		<!-- desktop-->
-		<div class="pageheader-bar desktop-only">
-			<div class="pageheader-bar-left">	
+		<div class="headerbar desktop-only">
+			<div class="headerbar-left">	
 				{{block "search-desktop" .}}
 				{{end}}
 			</div>
-			<div class="pageheader-bar-center">
+			<div class="headerbar-center">
 				<a href="/">
 					<img class="logo-desktop" src="/asset/data/images/aigner-logo.svg">
 				</a>
 			</div>
-			<div class="pageheader-bar-right">
+			<div class="headerbar-right">
 				<div class="pageheader-link">
 					<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
 					<a href="javascript:void(0)">login / register</a>	
@@ -53,4 +54,9 @@
 
 	</div>
 </div>
+
+{{block "mainmenu-mobile-content" .}}
 {{end}}
+
+{{end}}
+

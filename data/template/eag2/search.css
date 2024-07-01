@@ -1,3 +1,7 @@
+#search-result {
+	margin-top: 20px;
+}
+
 .search-container {
 	display: flex;
 	justify-content: space-between;
@@ -61,7 +65,12 @@
 }
 
 
+
 @media screen and (max-width: 1024px) {
+	#search-mask {
+		top: var(--pageheader-height-desktop)
+	}	
+
 	.search-note {
 		padding-top: 30px;
 	}
@@ -89,6 +98,10 @@
 }
 
 @media screen and (min-width: 1025px) {
+	#search-mask {
+		top: var(--pageheader-height-desktop)
+	}
+
 	.search-container {
 		width: 300px;
 	}
