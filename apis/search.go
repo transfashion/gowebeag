@@ -28,7 +28,7 @@ func (api *Api) Search(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// testing aja
-	if payload.Text == "bag" {
+	if payload.Text == "bag" || payload.Text == "bags" {
 		data := make([]*Item, 4)
 		data[0] = &Item{Name: "EMEA HOBO BAG LOGO M", Price: 14000000}
 		data[1] = &Item{Name: "CELESTE SHOULDER BAG LOGO S", Price: 11000000}

@@ -14,7 +14,6 @@ const pnl_loading = document.getElementById('search-result-loading')
 const pnl_content = document.getElementById('search-result-content')
 const pnl_more = document.getElementById('search-result-more')
 
-var prevSearchValue;
 var prevSearchIcon;
 
 export async function Init(opt) {
@@ -54,14 +53,16 @@ export async function Init(opt) {
 		obj.addEventListener('keyup', (event) => {
 			let curValue = obj.value.trim()
 			if (curValue.length>=3) {
-				console.log('loading..')
 				pnl_searchempty.classList.add('hidden')
 				pnl_searchresult.classList.remove('hidden')
 				pnl_loading.classList.remove('hidden')
 				pnl_loading.innerHTML = `Searching ${curValue}...`
+				clearSearchResult()
 			} else {
 				pnl_searchempty.classList.remove('hidden')
 				pnl_searchresult.classList.add('hidden')
+				pnl_content.innerHTML=''
+				pnl_more.classList.add('hidden')
 			}
 
 			search_textbox_keyup(obj)
@@ -153,19 +154,11 @@ function search_textbox_keyup(obj) {
 }
 
 function startSearch(ev) {
-	
-
 	let el = ev.srcElement
 	let curValue = el.value.trim()
-
-	console.log('search', curValue)
 	if (curValue.length >= 3) { 
-		if (curValue != prevSearchValue) {
-			doSearch(el.value)
-		}
-		prevSearchValue = curValue
+		doSearch(el.value)
 	} else {
-		prevSearchValue = ""
 		resetSearch()
 	}
 }
@@ -179,6 +172,7 @@ async function doSearch(text) {
 
 	pnl_content.classList.remove('hidden')
 	
+
 	try {
 		var rawResponse = await fetch('/api/search', {
 			method: 'POST',
@@ -205,19 +199,49 @@ async function doSearch(text) {
 }
 
 function showSearchNotFound(text) {
-	pnl_content.innerHTML = `'${text}' not found in our product`
-	pnl_content.classList.remove('hidden')
-
-	pnl_loading.classList.add('hidden')
+	pnl_loading.innerHTML = `'${text}' not found in our product`
+	
+	pnl_content.classList.add('hidden')
+	
 	pnl_more.classList.add('hidden')
 	
 }
 
 function showSearchResult(text, res) {
-	pnl_content.innerHTML = `tampilkan hasil search '${text}'`
-	pnl_content.classList.remove('hidden')
-
 	pnl_loading.classList.add('hidden')
 	pnl_more.classList.remove('hidden')
-	
+	pnl_content.classList.remove('hidden')
+
+	// hapus child nodes
+	var x = pnl_content.querySelectorAll('.search-item-disappear')
+	for(var i = x.length - 1; i >= 0; i--) {
+        x[i].parentNode.removeChild(x[i]);
+    }
+
+	// tampilkan data baru
+	for (var i=0; i<res.length; i++) {
+		var item = res[i]
+		var div = document.createElement('div')
+		div.classList.add('search-result-item')
+		div.innerHTML = `
+			<div class="search-result-img-container">
+				<img class="search-result-img" src="${item.Image}">
+			</div>		
+			<div class="search-result-info-container">
+				<div class="search-result-info" field="Sku">${item.Sku}</div>
+				<div class="search-result-info" field="Name">${item.Name}</div>
+				<div class="search-result-info" field="Price">${item.Price}</div>
+			</div>
+		`
+		pnl_content.appendChild(div)
+		console.log(div)
+	}
+}
+
+function clearSearchResult() {
+	console.log(pnl_content.childNodes)
+	for (var i=0; i<pnl_content.childNodes.length; i++) {
+		var el = pnl_content.childNodes[i]
+		el.classList.add('search-item-disappear')
+	}
 }
