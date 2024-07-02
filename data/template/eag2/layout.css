@@ -77,7 +77,22 @@ body {
 	justify-content: flex-end;
 }
 
+.button-black {
+	background: #222;
+	border: 2px solid #222;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.25rem;
+	padding: 8px 40px;
+	text-transform: uppercase;
+	transition: all .15s ease
+}
 
+.button-black:active, .button-black:hover {
+    background: #666;
+    border-color: #666;
+}
 
 @media screen and (max-width: 1024px) {
 	#pagecontent {

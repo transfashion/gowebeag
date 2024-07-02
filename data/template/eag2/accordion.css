@@ -11,19 +11,37 @@
 	font-size: 1rem;
 	border-bottom: 1px solid #ddd;
 	text-transform: uppercase;
+	transition: 0.4s;
  }
   
  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
- .accordion-active, .accordion:hover {
+.accordion-active, .accordion:hover {
 	background-color: #fff;
- }
+}
 
+.accordion-active::after {
+	content: url(/template/assets/icon-dir-next.svg);
+	rotate: 90deg;
+} 
 
- .accordion-panel {
+.accordion::after {
+	content: url(/template/assets/icon-dir-next.svg);
+	width: 13px;
+	height: 13px;
+	float: right;
+	margin-left: 5px;
+	filter: invert(0.5)
+}
+
+ 
+
+.accordion-panel {
 	background-color: white;
-	display: none;
 	overflow: hidden;
- }
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+}
+
 
 .accordion-panel > a {
 	font-size: 1rem;

@@ -81,6 +81,10 @@
 		row-gap: 10px;
 	}
 
+	#search-result-more {
+		padding-top: 18px;
+	}
+
 	.search-result-item {
 		display: flex;
 		flex-direction: row;
@@ -130,6 +134,7 @@
 		
 	}
 
+	
 
 
 }
@@ -142,7 +147,14 @@
 	#search-result-content {
 		display: flex;
 		flex-direction: row;
-		column-gap: 10px;
+		column-gap: 30px;
+		justify-content: center;
+	}
+
+	#search-result-more {
+		display: flex;
+		justify-content: center;
+		padding-top: 24px;
 	}
 
 	.search-result-item {
@@ -192,7 +204,7 @@
 		display: none;
 	}
 
-
+	
 }
 
 
