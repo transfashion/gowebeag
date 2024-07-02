@@ -1,0 +1,10 @@
+name: collection
+title: Collection
+
+device:
+  mobile:
+    - collection.html
+  tablet:
+    - collection.html
+  desktop:
+    - collection.html

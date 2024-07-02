@@ -1,0 +1,10 @@
+name: content
+title: Content
+
+device:
+  mobile:
+    - content.html
+  tablet:
+    - content.html
+  desktop:
+    - content.html

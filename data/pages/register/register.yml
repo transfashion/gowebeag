@@ -1,0 +1,10 @@
+name: login
+title: Login
+
+device:
+  mobile:
+    - register.html
+  tablet:
+    - register.html
+  desktop:
+    - register.html

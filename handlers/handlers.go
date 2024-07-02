@@ -8,6 +8,12 @@ import (
 	"github.com/fgtago/fgweb/appsmodel"
 )
 
+type PageSetup struct {
+	ShowHeader     bool
+	ShowFooter     bool
+	ShowFooterRow4 bool
+}
+
 type Handler struct {
 	Webservice *appsmodel.Webservice
 }

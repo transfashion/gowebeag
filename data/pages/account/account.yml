@@ -1,0 +1,10 @@
+name: account
+title: Account
+
+device:
+  mobile:
+    - account.html
+  tablet:
+    - account.html
+  desktop:
+    - account.html
