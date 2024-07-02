@@ -6,12 +6,12 @@
 	top: 0;
 	bottom: 0;
 	left: calc(-1 * 100vw);
-	right: calc( 100vw - 20px);
+	right: 100vw ;
 	margin: auto;
 	background-color: #fff;
 	visibility: hidden;
 	opacity: 0.8;
-	transition: all 0.5s;
+	transition: all 0.3s;
 }
 
 .mainmenu-visible {
@@ -33,6 +33,18 @@
 	flex-grow: 1;
 }
 
+#mainmenu-mobile nav > a {
+	font-size: 1rem;
+	display: block;
+	padding: 14px 18px 14px 18px;
+	text-decoration: none;
+	color: #000;
+	border-bottom: 1px solid #ddd;
+	text-transform: uppercase;
+} 
+
 .mainmenu-mobile-bottom {
 	background-color: #fff;
 }
+
+
