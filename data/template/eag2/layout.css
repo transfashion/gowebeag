@@ -6,6 +6,7 @@
 
 html {
 	scrollbar-gutter: stable;
+	font-size: 16px;
 }
 
 body {
@@ -15,7 +16,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
-	font-size: 16px;
 	font-weight: 400;
 	font-style: normal;
 }
