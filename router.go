@@ -20,6 +20,11 @@ func Router(mux *chi.Mux) error {
 	fgweb.Get(mux, "/manifest.json", hnd.Manifest)
 	fgweb.Get(mux, "/", hnd.Home)
 
+	fgweb.Get(mux, "/catalog/{brand}/{gender}/{category}", hnd.Catalog)
+	fgweb.Get(mux, "/catalog/{brand}/{gender}", hnd.Catalog)
+	fgweb.Get(mux, "/catalog/{brand}", hnd.Catalog)
+	//fgweb.Get(mux, "/catalog", hnd.Catalog)
+
 	api := apis.New(appsmodel.GetWebservice())
 	fgweb.Post(mux, "/api/promoter", api.Promoter)
 	fgweb.Post(mux, "/api/search", api.Search)

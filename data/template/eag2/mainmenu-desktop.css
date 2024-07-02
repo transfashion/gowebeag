@@ -20,20 +20,15 @@
 
 
 
-#mainmenu-desktop .dropbtn {
-	height: var(--mainmenu-desktop-height);
-}
+
 
 #mainmenu-desktop .navbarlink {
-	height: calc(var(--mainmenu-desktop-height) - 2px);
-}
-
-#mainmenu-desktop .navbarlink, .dropbtn {
 	margin-right: 10px;
 	margin-left: 10px;
 	
+	height: 36px;
 	border: none;
-	display: flex;
+	display: inline-block;
 	justify-content: center;
 	align-content: center;
 	flex-direction: column;
@@ -43,12 +38,37 @@
 	background-color: inherit;
 	color: #000;
 	text-transform: uppercase;
-	padding: 0;
+	
 }
 
 #mainmenu-desktop .navbarlink:hover, .dropbtn:hover {
 	border-bottom: 2px solid #000;
 }
+
+button.dropbtn {
+	margin-top: -1px;
+}
+
+.dropbtn {
+	height: 40px;
+
+	margin-right: 10px;
+	margin-left: 10px;
+	
+
+	border: none;
+	display: inline-block;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	text-decoration: none;
+	font-size: 1rem;
+	border-bottom: 2px solid #fff;
+	background-color: inherit;
+	color: #000;
+	text-transform: uppercase;
+}
+
 
 
 .dropdown-content {

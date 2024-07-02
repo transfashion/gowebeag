@@ -1,0 +1,10 @@
+name: catalog
+title: Catalog
+
+device:
+  mobile:
+    - catalog.html
+  tablet:
+    - catalog.html
+  desktop:
+    - catalog.html
