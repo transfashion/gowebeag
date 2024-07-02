@@ -23,5 +23,6 @@ go.work.sum
 
 
 #current project
+.DS_Store
 vendor
 config.yml
