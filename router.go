@@ -30,6 +30,7 @@ func Router(mux *chi.Mux) error {
 	fgweb.Get(mux, "/catalog/{brand}", hnd.Catalog)
 	//fgweb.Get(mux, "/catalog", hnd.Catalog)
 
+	fgweb.Get(mux, "/content/index", hnd.ContentIndex)
 	fgweb.Get(mux, "/content/{id}", hnd.Content)
 	fgweb.Get(mux, "/collection/{tag}", hnd.Collection)
 
@@ -50,7 +51,7 @@ func PageSetup(next http.Handler) http.Handler {
 			pv.Setup = &handlers.PageSetup{
 				ShowHeader:     true,
 				ShowFooter:     true,
-				ShowFooterRow4: false,
+				ShowFooterRow3: false,
 			}
 			next.ServeHTTP(w, r)
 		}
