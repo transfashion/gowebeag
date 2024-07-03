@@ -1,0 +1,55 @@
+.input-group {
+	position: relative;
+}
+
+.form-input {
+	padding-inline: 0;
+}
+
+.input-group .form-input {
+	display: block;
+	background: none;
+	background-color: #fff;
+	font-size: 1rem;
+	font-weight: 500;
+	
+	border-radius: 0;
+	margin: 0px;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	height: 36px;
+	padding: 15px 0 0 0;
+	line-height: 1;
+	font-size: 1.2rem;
+}
+
+.input-group .form-input:focus {
+	outline: none;
+	border-bottom: 1px solid rgba(0, 0, 0);
+}
+
+.input-group .form-input:not([value=""]) ~ .form-input-label,
+.input-group .form-input:focus ~ .form-input-label {
+	top: 2px;
+	left: 10px;
+	color: #8995a2;
+	font-size: 0.8rem;
+}
+
+.input-group .form-input-label {
+	color: #8995a2;
+	font-size: 1rem;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 14px;
+	top: 14px;
+	-webkit-transition: 300ms ease all;
+	transition: 300ms ease all;
+}
+
+.input-group .form-input-label.shrink {
+	top: 2px;
+	left: 10px;
+	color: #8995a2;
+	font-size: 0.8rem;
+}

@@ -1,6 +1,6 @@
 {{template "layoutdasar" .}}
 {{define "pageheader"}}
-<div id="container-pageheader">
+<header id="container-pageheader" style="display: none !important;">
 	<div id="pageheader" class="pageheader" >
 		<!-- mobile-->
 		<div class="headerbar mobile-only">
@@ -53,10 +53,12 @@
 		{{end}}
 
 	</div>
-</div>
+
 
 {{block "mainmenu-mobile-content" .}}
 {{end}}
 
+	
+</header>
 {{end}}
 

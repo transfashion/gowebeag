@@ -86,13 +86,18 @@ body {
 	line-height: 1.25rem;
 	padding: 8px 40px;
 	text-transform: uppercase;
-	transition: all .15s ease
+	transition: all .15s ease;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .button-black:active, .button-black:hover {
     background: #666;
     border-color: #666;
 }
+
+
 
 @media screen and (max-width: 1024px) {
 	#pagecontent {
