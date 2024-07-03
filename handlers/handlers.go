@@ -11,7 +11,7 @@ import (
 type PageSetup struct {
 	ShowHeader     bool
 	ShowFooter     bool
-	ShowFooterRow4 bool
+	ShowFooterRow3 bool
 }
 
 type Handler struct {

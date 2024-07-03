@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/fgtago/fgweb/appsmodel"
@@ -15,8 +14,7 @@ func (hdr *Handler) Home(w http.ResponseWriter, r *http.Request) {
 	pv.Use(hdr.LoginCheck)
 
 	setup := pv.Setup.(*PageSetup)
-	fmt.Println(setup)
-	setup.ShowFooterRow4 = true
+	setup.ShowFooterRow3 = true
 
 	defaulthandlers.SimplePageHandler(pv, w, r)
 }
