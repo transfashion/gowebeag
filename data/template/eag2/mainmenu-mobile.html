@@ -1,0 +1,74 @@
+{{template "layoutdasar" .}}
+
+{{define "mainmenu-mobile-button"}}
+<img id="mainmenu-mobile-btn_open" src="/template/assets/icon-burgermenu.svg" class="pageheader-icon-img">
+{{end}}
+
+
+{{define "mainmenu-mobile-content"}}
+<div id="mainmenu-mobile">
+
+	<div class="headerbar mainmenu-mobile-top">
+		<div class="headerbar-left">
+			<img id="mainmenu-mobile-btn_close" src="/template/assets/icon-dir-prev.svg" class="pageheader-icon-img">
+		</div>
+		<div class="headerbar-center">
+			<a href="/">
+				<img class="logo-mobile" src="/asset/data/images/aigner-emblem.svg">
+			</a>
+		</div>
+		<div class="headerbar-right">
+		</div>
+	</div>
+
+	<nav class="mainmenu-mobile-middle">
+		<button class="accordion">Women</button>
+		<div class="accordion-panel">
+			<a href="/catalog/eag/women">ALL WOMEN COLLECTIONS</a>
+			<a href="/catalog/eag/women/accessories">ACCESSORIES</a>
+			<a href="/catalog/eag/women/bags">BAGS</a>
+			<a href="/catalog/eag/women/belts">BELTS</a>
+			<a href="/catalog/eag/women/readytowear">READY TO WEAR</a>
+			<a href="/catalog/eag/women/shoes">SHOES</a>
+			<a href="/catalog/eag/women/slg">SMALL LEATHER GOODS</a>
+			<a href="/catalog/eag/women/watches">WATCHES</a>
+		</div>
+
+		<button class="accordion">Men</button>
+		<div class="accordion-panel">
+			<a href="/catalog/eag/men">ALL MEN COLLECTIONS</a>
+			<a href="/catalog/eag/men/bags">BAGS</a>
+			<a href="/catalog/eag/men/belts">BELTS</a>
+			<a href="/catalog/eag/men/shoes">SHOES</a>
+			<a href="/catalog/eag/men/slg">SMALL LEATHER GOODS</a>
+			<a href="/catalog/eag/men/watch">WATCHES</a>
+		</div>
+
+		<a href="/content/index">Magazine</a>
+
+		<button class="accordion">Inspiration</button>
+		<div class="accordion-panel">
+			<a href="/content/video">VIDEOS</a>
+			<a href="/content/collectionbook">COLLECTION BOOK</a>
+			<a href="/content/highligt">SEASON HIGHLIGHTS</a>
+		</div>
+
+		<a href="/collection/newid">New In</a>
+		<a href="/collection/bestseller">Best Seller</a>
+		<a href="/collection/sale">Sale</a>
+
+	</nav>
+
+	<div class="mainmenu-mobile-bottom">
+		
+		<div class="pageheader-link">
+			<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
+			<a href="javascript:void(0)">login / register</a>	
+		</div>
+
+
+	</div>
+
+
+</div>
+{{end}}

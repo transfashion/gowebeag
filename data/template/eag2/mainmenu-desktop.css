@@ -1,0 +1,128 @@
+@media screen and (max-width: 1024px) {
+	#mainmenu-desktop {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	#mainmenu-desktop {
+		display: flex;
+		column-gap: 30px;
+		/* height: var(--mainmenu-desktop-height); */
+		height: 42px;
+		justify-content: center;		
+		align-items: center;
+		padding: 0 20px;
+		overflow: hidden;
+		
+		
+	}
+}
+
+
+
+
+
+#mainmenu-desktop .navbarlink {
+	margin-right: 10px;
+	margin-left: 10px;
+	
+	height: 40px;
+	border: none;
+	display: inline-block;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	text-decoration: none;
+	font-size: 1rem;
+	border-bottom: 2px solid #fff;
+	background-color: inherit;
+	color: #000;
+	text-transform: uppercase;
+	
+}
+
+#mainmenu-desktop .navbarlink:hover {
+	height: 39px;
+	border-bottom: 2px solid #000;
+}
+
+#mainmenu-desktop .dropbtn:hover {
+	border-bottom: 2px solid #000;
+}
+
+button.dropbtn {
+	margin-top: -1px;
+}
+
+.dropbtn {
+	height: 40px;
+
+	margin-right: 10px;
+	margin-left: 10px;
+
+	border: none;
+	display: inline-block;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	text-decoration: none;
+	font-size: 1rem;
+	border-bottom: 2px solid #fff;
+	background-color: inherit;
+	color: #000;
+	text-transform: uppercase;
+}
+
+
+
+.dropdown-content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	visibility: hidden;
+	transition: all 0.2s;
+}	
+	
+.dropdown:hover .dropbtn {
+	border-bottom: 2px solid #000;
+}
+
+.dropdown:hover .dropdown-content {
+	visibility: visible;
+	transition-delay: 0s;
+	z-index: 1;
+
+}
+
+
+.dropdown-content-container {
+	display: flex;
+	width: 900px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.dropdown-content-column {
+	
+	display: flex;
+	flex-direction: column;
+	row-gap: 18px;
+	column-gap: 18px;
+	min-width: 300px;
+}
+
+.dropdown-content-column a {
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.dropdown-content-column a:hover {
+	text-decoration: underline;
+}

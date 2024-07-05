@@ -1,0 +1,10 @@
+name: contentindex
+title: Content Index
+
+device:
+  mobile:
+    - contentindex.html
+  tablet:
+    - contentindex.html
+  desktop:
+    - contentindex.html

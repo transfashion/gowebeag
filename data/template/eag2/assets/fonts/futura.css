@@ -1,0 +1,21 @@
+@font-face {
+    font-family: futura-light;
+    font-style: normal;
+    font-weight: 400;
+    src: url(futura-light.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: futura-regular;
+    font-style: normal;
+    font-weight: 400;
+	src: url(futura-regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: futura-italic;
+    font-style: normal;
+    font-weight: 400;
+	src: url(futura-regular.woff2) format('woff2');
+}
+

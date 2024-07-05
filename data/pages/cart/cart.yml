@@ -1,0 +1,10 @@
+name: cart
+title: Cart
+
+device:
+  mobile:
+    - cart.html
+  tablet:
+    - cart.html
+  desktop:
+    - cart.html

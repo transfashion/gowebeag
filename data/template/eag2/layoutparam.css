@@ -1,0 +1,9 @@
+:root {
+	--pageheader-height-desktop: 147px;
+	--pageheader-height-mobile: 50px;
+
+	--pagecontent-mt-desktop: 147px;
+	--pagecontent-mt-mobile: 50px;
+
+	--mainmenu-desktop-height: 43px;
+}

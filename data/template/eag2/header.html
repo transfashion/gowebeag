@@ -1,0 +1,66 @@
+{{template "layoutdasar" .}}
+{{define "pageheader"}}
+<header id="container-pageheader">
+	<div id="pageheader" class="pageheader" >
+		<!-- mobile-->
+		<div class="headerbar mobile-only">
+			<div class="headerbar-left">
+				{{block "mainmenu-mobile-button" .}}
+				{{end}}
+			</div>
+			<div class="headerbar-center">
+				<a href="/">
+					<img class="logo-mobile" src="/asset/data/images/aigner-emblem.svg">
+				</a>
+			</div>
+			<div class="headerbar-right">
+				<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
+				<img src="/template/assets/icon-chart.svg" class="pageheader-icon-img">
+				{{block "search-mobile-icon" .}}
+				{{end}}
+			</div>
+		</div>
+
+		<!-- desktop-->
+		<div class="headerbar desktop-only">
+			<div class="headerbar-left">	
+				{{block "search-desktop" .}}
+				{{end}}
+			</div>
+
+			<div class="headerbar-center">
+				<a href="/">
+					<img class="logo-desktop" src="/asset/data/images/aigner-logo.svg">
+				</a>
+			</div>
+
+			<div class="headerbar-right">
+				<div class="pageheader-link" onclick="location.href='/user/login'">
+					<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
+					<a href="/user/login">login / register</a>	
+				</div>
+				<div class="pageheader-link" onclick="location.href='/cart'">
+					<img src="/template/assets/icon-chart.svg" class="pageheader-icon-img">
+					<a href="/cart">cart</a>	
+				</div>
+			</div>
+
+		</div>
+
+
+		{{block "search-content" .}}
+		{{end}}
+
+		{{block "mainmenu-desktop-bar" .}}
+		{{end}}
+
+	</div>
+
+
+{{block "mainmenu-mobile-content" .}}
+{{end}}
+
+	
+</header>
+{{end}}
+

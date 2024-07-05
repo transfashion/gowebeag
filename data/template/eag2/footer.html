@@ -1,0 +1,124 @@
+{{template "layoutdasar" .}}
+{{define "pagefooter"}}
+<footer>
+	<div class="footer-row">
+		<div class="footer-row-blok footer-shops" >
+			<div class="footer-row-blok-item">
+				<div class="footer-row-title">AIGNER SHOPS</div>
+				<div>Find Aigner Shops in Indonesia</div>
+				<button class="button-black">Find Shops</button>
+			</div>
+			
+		</div>
+		<div class="footer-row-blok footer-subscribe">
+			<form method="POST" action="/subscribe">
+			<div class="footer-row-blok-item">
+				<div class="footer-row-title">SUBSCRIBE TO GET ETIENNE AIGNER NEWSLETTER</div>
+				<div>
+					Please register here to receive our free newsletter.<br>
+					Your consent to be sent the newsletter can be revoked at any time.
+				</div>
+				<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+					<div id="subscribe-email" class="dw-input-textbox">
+						<input type="text" id="email" name="email" onkeyup="this.setAttribute('value', this.value);" value="">					
+						<label for="email">Your email address</label>
+					</div>
+
+					<div id="subscribe-gender" class="dw-input-radio">
+						<div class="dw-input-radio-caption">
+							Your Interests
+						</div>
+						<label>Men
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<label>Women
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+
+				</div>
+				<input type="submit" class="button-black" value="Register">
+				<p class="footer-subscribe">
+					I agree that PT Trans Fashion Indonesia as Aigner distributor in Indonesia is allowed to send me personalized newsletters 
+					regarding Aigner products, offers and events. 
+					In case of my consent that my e-mail address can be used for the purpose of advertising, 
+					I am aware of that my personal clicking behaviour will be tracked in order 
+					to send me relevant information tailored to my preferences. 
+					The tracking applies to the concrete clicking behaviour like for example reaction 
+					and behavioral data (opening of the newsletter, reading of content). 
+				</p>
+			</div>
+			</form>
+		</div>
+	</div>
+	<div class="footer-row" style="margin-bottom: 30px;">
+		<div class="footer-row-blok">
+			<div class="footer-row-blok-item">
+				<a class="footer-row-link footer-row-title" href="/catalog/eag/women">Women</a><br>
+				<a class="footer-row-link" href="/catalog/eag/women/accessories">Accessories</a><br>
+				<a class="footer-row-link" href="/catalog/eag/women/bags">Bags</a><br>
+				<a class="footer-row-link" href="/catalog/eag/women/belts">Belts</a><br>
+				<a class="footer-row-link" href="/catalog/eag/women/readytowear">Ready To Wear</a><br>
+				<a class="footer-row-link" href="/catalog/eag/women/shoes">Shoes</a><br>
+				<a class="footer-row-link" href="/catalog/eag/women/slg">Small Leather Goods</a><br>
+				<a class="footer-row-link" href="/catalog/eag/women/watches">Watches</a><br>
+			</div>
+			<div class="footer-row-blok-item">
+				<a class="footer-row-link footer-row-title" href="/catalog/eag/men">Men</a><br>
+				<a class="footer-row-link" href="/catalog/eag/men/bags">Accessories</a><br>
+				<a class="footer-row-link" href="/catalog/eag/men/bags">Bags</a><br>
+				<a class="footer-row-link" href="/catalog/eag/men/belts">Belts</a><br>
+				<a class="footer-row-link" href="/catalog/eag/men/shoes">Shoes</a><br>
+				<a class="footer-row-link" href="/catalog/eag/men/slg">Small Leather Goods</a><br>
+				<a class="footer-row-link" href="/catalog/eag/men/watch">Watches</a><br>
+			</div>
+		</div>
+		<div class="footer-row-blok">
+			<div class="footer-row-blok-item">
+				<span class="footer-row-title">Aignerworld</span><br>
+				<a class="footer-row-link" href="/content/aigner-company">Company</a><br>
+				<a class="footer-row-link" href="/content/materials-and-sustainability">Materials And Sustainability</a><br>
+				<a class="footer-row-link" href="/content/craftsmanship">Craftsmanship</a><br>
+			</div>
+			<div class="footer-row-blok-item">
+				<span class="footer-row-title">Legal</span><br>
+				<a class="footer-row-link" href="/content/terms-and-conditions">Terms And Condition</a><br>
+				<a class="footer-row-link" href="/content/privacy-policy">Privacy Policy</a><br>
+				<a class="footer-row-link" href="/content/contact">Contact</a><br>
+			</div>
+		</div>
+	</div>	
+	
+	{{if .Setup.ShowFooterRow3}}
+	<div id="footer-row3">
+		<div id="footer-row3-title">
+			AIGNER – PREMIUM LEATHER GOODS FOR THE HIGHEST DEMANDS
+		</div>
+		<p id="footer-row3-content">
+			Unique craftsmanship and highest quality coupled with tradition and perfection in every
+			detail - those special properties are the symbol of the products of the premium brand Aigner. 
+			Today the German brand, with its three product areas leather, accessories and fashion, 
+			is part of the premier class and can be regularly admired at the Fashion Fairs in Milan. 
+			The distinctive mark of the world-famous brand is the characteristic Aigner "A", 
+			a small horseshoe, which identifies its owner as a connoisseur of style. 
+			Until the Munich-based company reached its important position as a manufacturer 
+			of exclusive leather goods such as handbags, belts, luggage and accessories for 
+			ladies and gentlemen, the founder of Etienne Aigner had to master some obstacles. 
+			Initially he designed only a few bag collections for several haute couture houses in Paris. 
+			Among other things the designer created his first items for Christian Dior and Hermès. 
+			Finally, in 1950 and 1965 he founded his own companies in New York and Munich. 
+			At the same time Heiner Rankl joined the company and the brand was able to 
+			position itself on the market as a constant supplier of luxury items. 
+			The brand Aigner currently still stands for sovereignty, security and trust 
+			as well as a constant timeless and always valid style. 
+			The distinctive accessories above all inspire modern people, who follow innovation 
+			and appreciate tradition.
+		</p>
+	</div>
+	{{end}}
+
+</footer>
+{{end}}

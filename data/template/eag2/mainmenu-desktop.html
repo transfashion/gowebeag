@@ -1,0 +1,69 @@
+{{template "layoutdasar" .}}
+
+{{define "mainmenu-desktop-bar"}}
+<!-- referensi: https://www.w3schools.com/howto/howto_css_mega_menu.asp -->
+<nav id="mainmenu-desktop" class="show-on-desktop">
+	<div class="dropdown">
+		<a class="dropbtn" href="/catalog/eag/women">Women</a>
+		<div class="dropdown-content">
+			<div class="dropdown-content-container">
+				<div class="dropdown-content-column">
+					<div><a href="/catalog/eag/women/accessories">ACCESSORIES</a></div>
+					<div><a href="/catalog/eag/women/bags">BAGS</a></div>
+					<div><a href="/catalog/eag/women/belts">BELTS</a></div>
+					<div><a href="/catalog/eag/women/readytowear">READY TO WEAR</a></div>
+				</div>
+				<div class="dropdown-content-column">
+					<div><a href="/catalog/eag/women/shoes">SHOES</a></div>
+					<div><a href="/catalog/eag/women/slg">SMALL LEATHER GOODS</a></div>
+					<div><a href="/catalog/eag/women/watches">WATCHES</a></div>
+				</div>
+				<div class="dropdown-content-column"></div>
+			</div>
+		</div>
+	</div>
+	<div class="dropdown">
+		<a class="dropbtn" href="/catalog/eag/men">Men</a>
+		<div class="dropdown-content">
+			<div class="dropdown-content-container">
+				<div class="dropdown-content-column">
+					<div><a href="/catalog/eag/men/bags">BAGS</a></div>
+					<div><a href="/catalog/eag/men/belts">BELTS</a></div>
+				</div>
+				<div class="dropdown-content-column">
+					<div><a href="/catalog/eag/men/shoes">SHOES</a></div>
+					<div><a href="/catalog/eag/men/slg">SMALL LEATHER GOODS</a></div>
+					<div><a href="/catalog/eag/men/watch">WATCHES</a></div>
+				</div>
+				<div class="dropdown-content-column"></div>
+			</div>	
+		</div>
+	</div>		
+
+	<a class="navbarlink" href="/content/index">Magazine</a>
+
+	<div class="dropdown">
+		<button class="dropbtn">Inspiration</button>
+		<div class="dropdown-content">
+			<div class="dropdown-content-container">
+				<div class="dropdown-content-column">
+					<div><a href="/content/video">VIDEOS</a></div>
+				</div>
+				<div class="dropdown-content-column">
+					<div><a href="/content/collectionbook">COLLECTION BOOK</a></div>
+				</div>
+				<div class="dropdown-content-column">
+					<div><a href="/content/highligt">SEASON HIGHLIGHTS</a></div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<a class="navbarlink" href="/collection/newid">New In</a>
+	<a class="navbarlink" href="/collection/bestseller">Best Seller</a>
+	<a class="navbarlink" href="/collection/sale">Sale</a>
+</nav>
+{{end}}
+
+
+
+

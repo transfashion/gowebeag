@@ -1,0 +1,10 @@
+name: product
+title: Product
+
+device:
+  mobile:
+    - product.html
+  tablet:
+    - product.html
+  desktop:
+    - product.html

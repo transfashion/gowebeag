@@ -1,0 +1,10 @@
+name: checkout
+title: Checkout
+
+device:
+  mobile:
+    - checkout.html
+  tablet:
+    - checkout.html
+  desktop:
+    - checkout.html
