@@ -2,20 +2,21 @@
 <html>
 	<head>
 		<title>{{.Title}}</title>
+		<base href="{{.Setup.BaseUrl}}">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<link rel="manifest" href="/manifest.json">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="/template/layoutparam.css">
-		<link rel="stylesheet" href="/template/layout.css">
-		<link rel="stylesheet" href="/template/footer.css">
-		<link rel="stylesheet" href="/template/header.css">
-		<link rel="stylesheet" href="/template/accordion.css">
-		<link rel="stylesheet" href="/template/mainmenu-desktop.css">
-		<link rel="stylesheet" href="/template/mainmenu-mobile.css">
-		<link rel="stylesheet" href="/template/search.css">
-		<link rel="stylesheet" href="/template/dwform.css">
+		<link rel="manifest" href="manifest.json">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="template/layoutparam.css">
+		<link rel="stylesheet" href="template/layout.css">
+		<link rel="stylesheet" href="template/footer.css">
+		<link rel="stylesheet" href="template/header.css">
+		<link rel="stylesheet" href="template/accordion.css">
+		<link rel="stylesheet" href="template/mainmenu-desktop.css">
+		<link rel="stylesheet" href="template/mainmenu-mobile.css">
+		<link rel="stylesheet" href="template/search.css">
+		<link rel="stylesheet" href="template/dwform.css">
 
 		<script>
 			window.$global = {}
@@ -58,7 +59,7 @@
 	{{end}}
 
 	<script type="module">
-		import * as uilayout from '/template/layout.mjs'
+		import * as uilayout from './template/layout.mjs'
 		window.$uilayout = uilayout
 	</script>	
 

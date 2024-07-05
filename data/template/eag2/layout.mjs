@@ -1,7 +1,7 @@
-import _, { map } from '/asset/data/jslibs/underscore-esm-min.mjs'
-import * as promoter from '/template/promoter.mjs'
-import * as search from '/template/search.mjs'
-import * as mainmenumobile from '/template/mainmenu-mobile.mjs'
+import _, { map } from './../asset/data/jslibs/underscore-esm-min.mjs'
+import * as promoter from './promoter.mjs'
+import * as search from './search.mjs'
+import * as mainmenumobile from './mainmenu-mobile.mjs'
 
 const obj_pageheader_container = document.getElementById("container-pageheader")
 const obj_pageheader = document.getElementById("pageheader")

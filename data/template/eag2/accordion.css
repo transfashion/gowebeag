@@ -20,12 +20,12 @@
 }
 
 .accordion-active::after {
-	content: url(/template/assets/icon-dir-next.svg);
+	content: url(./assets/icon-dir-next.svg);
 	rotate: 90deg;
 } 
 
 .accordion::after {
-	content: url(/template/assets/icon-dir-next.svg);
+	content: url(./assets/icon-dir-next.svg);
 	width: 13px;
 	height: 13px;
 	float: right;

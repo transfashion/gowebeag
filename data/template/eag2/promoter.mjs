@@ -1,4 +1,4 @@
-import _, { map } from '/asset/data/jslibs/underscore-esm-min.mjs'
+import _, { map } from './../asset/data/jslibs/underscore-esm-min.mjs'
 
 
 
@@ -13,7 +13,7 @@ export async function Init(opt) {
  	var link = document.createElement('link');
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
-	link.href = '/template/promoter.css';
+	link.href = 'template/promoter.css';
 	link.onload = function () {
 		promoter_setup(self)
 	};  
@@ -34,7 +34,7 @@ async function promoter_setup(self) {
 		<div></div>
 		<div class="promoter-content"></div>
 		<div>
-			<img id="pageheader-btn_promoter_close" src="/template/assets/icon-close.svg">
+			<img id="pageheader-btn_promoter_close" src="template/assets/icon-close.svg">
 		</div>
 	`
 	self.pageheader.parentNode.insertAdjacentElement("afterbegin", self.el)
@@ -93,7 +93,7 @@ async function fetchMessages(self) {
 }
 
 async function getMessages() {
-	var rawResponse = await fetch('/api/promoter', {
+	var rawResponse = await fetch('api/promoter', {
 		method: 'POST',
 		headers: {
 		  'Accept': 'application/json',

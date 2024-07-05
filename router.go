@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/fgtago/fgweb"
@@ -48,11 +49,22 @@ func PageSetup(next http.Handler) http.Handler {
 		} else {
 			ctx := r.Context()
 			pv := ctx.Value(appsmodel.PageVariableKeyName).(*appsmodel.PageVariable)
+
+			var base_href string
+			if r.Header.Get("Base_href") != "" {
+				base_href = r.Header.Get("Base_href")
+			} else {
+				base_href = "/"
+			}
+
 			pv.Setup = &handlers.PageSetup{
+				BaseUrl:        base_href,
 				ShowHeader:     true,
 				ShowFooter:     true,
 				ShowFooterRow3: false,
 			}
+
+			fmt.Println(pv.Setup)
 			next.ServeHTTP(w, r)
 		}
 

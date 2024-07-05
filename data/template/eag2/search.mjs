@@ -1,5 +1,5 @@
-import _, { map } from '/asset/data/jslibs/underscore-esm-min.mjs'
-import * as cookie from '/asset/data/jslibs/cookie.mjs'
+import _, { map } from './../asset/data/jslibs/underscore-esm-min.mjs'
+import * as cookie from './../asset/data/jslibs/cookie.mjs'
 
 const search_containers = document.querySelectorAll(".search-container")
 const search_textboxes = document.querySelectorAll(".search-textbox")
@@ -128,7 +128,7 @@ function search_button_click(btn) {
 		search_container_click(cnt)
 	} else {
 		resetSearch()
-		btn.src = "/template/assets/icon-search.svg"
+		btn.src = "template/assets/icon-search.svg"
 		for (var i = 0; i < search_textboxes.length; i++) {
 			var txt = search_textboxes[i]
 			txt.value = ""
@@ -139,9 +139,9 @@ function search_button_click(btn) {
 function search_textbox_keyup(obj) {
 	var ico;
 	if (obj.value == "") {
-		ico =  "/template/assets/icon-search.svg"
+		ico =  "template/assets/icon-search.svg"
 	} else {
-		ico = "/template/assets/icon-close.svg"
+		ico = "template/assets/icon-close.svg"
 	}
 	if (ico==prevSearchIcon) {
 		return
@@ -174,7 +174,7 @@ async function doSearch(text) {
 	
 
 	try {
-		var rawResponse = await fetch('/api/search', {
+		var rawResponse = await fetch('api/search', {
 			method: 'POST',
 			headers: {
 			  'Accept': 'application/json',
