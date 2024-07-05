@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/fgtago/fgweb"
@@ -63,8 +62,6 @@ func PageSetup(next http.Handler) http.Handler {
 				ShowFooter:     true,
 				ShowFooterRow3: false,
 			}
-
-			fmt.Println(pv.Setup)
 			next.ServeHTTP(w, r)
 		}
 
