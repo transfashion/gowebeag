@@ -9,6 +9,7 @@ import (
 )
 
 type PageSetup struct {
+	BaseUrl        string
 	ShowHeader     bool
 	ShowFooter     bool
 	ShowFooterRow3 bool
