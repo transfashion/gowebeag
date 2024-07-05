@@ -1,6 +1,6 @@
 {{template "layoutdasar" .}}
 {{define "pagefooter"}}
-<footer style="display: none !important;">
+<footer>
 	<div class="footer-row">
 		<div class="footer-row-blok footer-shops" >
 			<div class="footer-row-blok-item">
@@ -18,22 +18,26 @@
 					Please register here to receive our free newsletter.<br>
 					Your consent to be sent the newsletter can be revoked at any time.
 				</div>
-				<div style="display: flex; justify-content: center;">
-					
-					
-					<!-- 
-					sumber:
-					https://stackoverflow.com/questions/64523458/how-to-position-input-label-at-the-top-if-input-has-a-value 
-					-->
-					<!-- <div class="input-group footer-email-subscribe">
-						<input type="text" id="email" class="form-input"  onkeyup="this.setAttribute('value', this.value);" value="" />
-						<label for="email" class="form-input-label">Your email address</label>
-					</div> -->
-					
-					<!-- <div class="input-textbox">
-						<input type="text" id="email" name="email">
+				<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+					<div id="subscribe-email" class="dw-input-textbox">
+						<input type="text" id="email" name="email" onkeyup="this.setAttribute('value', this.value);" value="">					
 						<label for="email">Your email address</label>
-					</div> -->
+					</div>
+
+					<div id="subscribe-gender" class="dw-input-radio">
+						<div class="dw-input-radio-caption">
+							Your Interests
+						</div>
+						<label>Men
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<label>Women
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+					</div>
 
 				</div>
 				<input type="submit" class="button-black" value="Register">

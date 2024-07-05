@@ -1,6 +1,6 @@
 {{template "layoutdasar" .}}
 {{define "pageheader"}}
-<header id="container-pageheader" style="display: none !important;">
+<header id="container-pageheader">
 	<div id="pageheader" class="pageheader" >
 		<!-- mobile-->
 		<div class="headerbar mobile-only">
@@ -27,22 +27,24 @@
 				{{block "search-desktop" .}}
 				{{end}}
 			</div>
+
 			<div class="headerbar-center">
 				<a href="/">
 					<img class="logo-desktop" src="/asset/data/images/aigner-logo.svg">
 				</a>
 			</div>
-			<div class="headerbar-right">
-				<div class="pageheader-link">
-					<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
-					<a href="javascript:void(0)">login / register</a>	
-				</div>
 
-				<div class="pageheader-link">
+			<div class="headerbar-right">
+				<div class="pageheader-link" onclick="location.href='/user/login'">
+					<img src="/template/assets/icon-account.svg" class="pageheader-icon-img">
+					<a href="/user/login">login / register</a>	
+				</div>
+				<div class="pageheader-link" onclick="location.href='/cart'">
 					<img src="/template/assets/icon-chart.svg" class="pageheader-icon-img">
-					<a href="javascript:void(0)">cart</a>	
+					<a href="/cart">cart</a>	
 				</div>
 			</div>
+
 		</div>
 
 
